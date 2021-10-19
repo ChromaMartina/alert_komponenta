@@ -1,0 +1,83 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+
+@include container;
+@include img;
+
+h1 {
+  @include text(1.5rem, 700);
+}
+
+p {
+  @include text(1.35rem, 400);
+  color: $colorText;
+}
+
+a {
+  @include text(1.35rem, 400);
+  color: $colorAlert;
+}
+
+$styles: (
+  requestConfirm: $colorConfirm,
+  requestAlert: $colorAlert,
+  requestNotConfirm: $colorNotConfirm,
+);
+
+@each $nameClass, $color in $styles {
+  .#{$nameClass} {
+    background-color: lighten($color, 45%);
+    border-left: $color solid 5px;
+    color: darken($color, 15%);
+    @include div;
+  }
+}
+
+.requestAlert img {
+  box-shadow: 0 0 0 15px rgba(128, 128, 128, 0.08),
+    0 0 0 30px rgba(128, 128, 128, 0.03);
+  border-radius: 50%;
+}
+
+.requestAlertText {
+  @include divAlertText(column);
+}
+
+.requestNotConfirmText {
+  @include divAlertText(row);
+}
+
+a.requestNotConfirmIco::before {
+  content: url(img/retry.ico);
+  padding-left: 60px;
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .requestNotConfirmText {
+    @include divAlertText(column);
+  }
+  a.requestNotConfirmIco::before {
+    padding-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .requestConfirm,
+  .requestAlert,
+  .requestNotConfirm {
+    @include divMedia;
+  }
+
+  .requestNotConfirmText {
+    @include divAlertText(column);
+  }
+  a.requestNotConfirmIco::before {
+    padding-left: 5px;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+}

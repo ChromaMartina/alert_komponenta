@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Alert komponenta</title>
+  </head>
+  <body>
+    <div class="requestConfirm" role="alert">
+      <img src="img/img1.png" alt="požadavek potvrzen" />
+      <h1>Požadavek byl potvrzen.</h1>
+    </div>
+    <div class="requestAlert" role="alert">
+      <img src="img/img2.png" alt="potvrzení požadavku" />
+      <div class="requestAlertText">
+        <h1>Potvrzení požadavku</h1>
+        <p><a href="#">Odeslat SMS</a> s potvrzovacím kódem.</p>
+      </div>
+    </div>
+    <div class="requestNotConfirm" role="alert">
+      <img src="img/img3.png" alt="nepotvrzen požadavek" />
+      <div class="requestNotConfirmText">
+        <h1>Požadavek nebyl potvrzen.</h1>
+        <p>
+          <a class="requestNotConfirmIco" href="#">Zkusit znovu</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2%;
+  background-color: aquamarine;
+}
+
+img {
+  height: 60px;
+  margin: 40px 60px;
+}
+
+h1 {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: black;
+}
+
+a {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #605690;
+}
+
+.requestConfirm {
+  background-color: #eff9f2;
+  border-left: #48bb6b solid 5px;
+  color: #31854b;
+  width: 60%;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.requestAlert {
+  background-color: #e2dfec;
+  border-left: #605690 solid 5px;
+  color: #403960;
+  width: 60%;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.requestNotConfirm {
+  background-color: #fef4f5;
+  border-left: #ef1e27 solid 5px;
+  color: #b40d14;
+  width: 60%;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.requestAlert img {
+  -webkit-box-shadow: 0 0 0 15px rgba(128, 128, 128, 0.08), 0 0 0 30px rgba(128, 128, 128, 0.03);
+          box-shadow: 0 0 0 15px rgba(128, 128, 128, 0.08), 0 0 0 30px rgba(128, 128, 128, 0.03);
+  border-radius: 50%;
+}
+
+.requestAlertText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.requestNotConfirmText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+a.requestNotConfirmIco::before {
+  content: url(img/retry.ico);
+  padding-left: 60px;
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .requestNotConfirmText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  a.requestNotConfirmIco::before {
+    padding-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .requestConfirm,
+  .requestAlert,
+  .requestNotConfirm {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .requestNotConfirmText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  a.requestNotConfirmIco::before {
+    padding-left: 5px;
+  }
+  h1,
+  p {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
